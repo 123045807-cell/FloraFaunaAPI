@@ -8,8 +8,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./flask-client/templates:/app/templates 
-      - ./flask-client/static:/app/static
+      - ./flask-client:/app
     depends_on:
       - fastapi-api
     networks:
