@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+
+  flask-client:
+    build: ./flask-client
+    container_name: flask-client
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask-client/templates:/app/templates 
+      - ./flask-client/static:/app/static
+    depends_on:
+      - fastapi-api
+    networks:
+      - app-network
+
+  fastapi-api:
+    build: ./fastapi-api
+    container_name: fastapi-api
+    ports:
+      - "8000:8000"
+    # depends_on:
+    #   - db
+    networks:
+      - app-network
+
+  laravel-admin:
+    build: ./laravel-admin
+    container_name: laravel-admin
+    ports:
+      - "8080:8000"
+    depends_on:
+      - fastapi-api
+    networks:
+      - app-network
+
+  # db:
+  #   image: mysql:8
+  #   container_name: mysql-db
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: flora_fauna
+  #     MYSQL_USER: user
+  #     MYSQL_PASSWORD: password
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql-data:/var/lib/mysql
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+
+# volumes:
+#   mysql-data:
