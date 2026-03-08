@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zona 2 - Jalpan de Serra Fauna y Flora</title>
+  <title>Zona 1 - Fauna y Flora</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
@@ -14,14 +14,14 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f8f7f0; /* Fondo más claro */
+      background-color: #f8f7f0; /* Fondo más claro como en index (2).HTML */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
       padding-top: 60px; /* Espacio para el header fijo */
     }
 
-    /* 1. Encabezado Fijo */
+    /* 1. Encabezado Fijo (Adaptación del original de ZONA1.HTML) */
     .navbar {
       position: fixed; /* Header fijo */
       top: 0;
@@ -50,13 +50,9 @@
       margin-right: 15px;
       margin-top: -10px;
     }
-
-    /* 2. Hero Section (Fondo para Jalpan de Serra) */
-    .hero-internal {
+  .hero-internal {
         height: 50vh;
-        /* IMPORTANTE: CAMBIA 'hero-zona2.jpg' por la imagen de fondo deseada para Jalpan de Serra */
-        background-image: url('{{ url_for('static', filename='img/hero-zona2.jpg') }}'); 
-        background-color: #4b7b38; /* Color de respaldo/base */
+        background-image: url('{{ url_for('static', filename='img/hero-zona1.jpg') }}'); 
         background-size: cover;
         background-position: center;
         display: flex;
@@ -65,15 +61,11 @@
         padding-bottom: 40px;
         color: white;
     }
-
-    /* Estilos del Título dentro del Hero */
     .hero-content h1 {
         font-size: 3em; 
         font-weight: bold; 
         text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
-    
-    /* 3. Estilos de Tarjeta */
     .card-custom {
         height: 100%;
         background-color: white;
@@ -95,14 +87,13 @@
         object-fit: cover;
     }
     
-    /* Placeholder para imagen si no hay URL */
     .image-placeholder {
         height: 200px; 
         display: flex; 
         align-items: center; 
         justify-content: center; 
         color: white;
-        background-color: #ccc; 
+        background-color: #ccc;
     }
 
     .card-body-custom {
@@ -116,7 +107,6 @@
         color: #333;
     }
 
-    /* Estilos para badges (estado de conservación) */
     .badge-conservacion {
         font-size: 0.9em;
         padding: 0.3em 0.6em;
@@ -124,15 +114,13 @@
         font-weight: 600;
     }
     
-    /* CLASES DE ESTADO DE CONSERVACIÓN (Las mismas de ZONA1.HTML) */
-    .bg-preocupacion-menor { background-color: #28a745; color: white !important; } /* Verde */
-    .bg-casi-amenazado { background-color: #90EE90; color: black !important; } /* Verde Claro */
-    .bg-vulnerable { background-color: #ffc107; color: black !important; } /* Amarillo/Naranja */
-    .bg-en-peligro { background-color: #dc3545; color: white !important; } /* Rojo */
-    .bg-en-peligro-critico { background-color: #8B0000; color: white !important; } /* Rojo Oscuro */
-    .bg-desconocido { background-color: #6c757d; color: white !important; } /* Gris (Default) */
+    .bg-preocupacion-menor { background-color: #28a745; color: white !important; }
+    .bg-casi-amenazado { background-color: #90EE90; color: black !important; }
+    .bg-vulnerable { background-color: #ffc107; color: black !important; } 
+    .bg-en-peligro { background-color: #dc3545; color: white !important; } 
+    .bg-en-peligro-critico { background-color: #8B0000; color: white !important; } 
+    .bg-desconocido { background-color: #6c757d; color: white !important; } 
 
-    /* 4. Pie de página */
     .footer {
       background-color: #8C5E2A;
       color: #fff;
@@ -178,7 +166,7 @@
   <section class="hero-internal">
       <div class="hero-content">
           <h1>
-              Jalpan de Serra<br>Fauna & Flora
+              Arroyo Seco<br>Fauna & Flora
           </h1>
       </div>
   </section>

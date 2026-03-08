@@ -1,9 +1,3 @@
-
-
-/* =========================================
-   COLORES BASE DEL PROYECTO
-   ========================================= */
-
 :root {
     --verde: #2F4F2F;
     --cafe: #8C5E2A;
@@ -13,74 +7,31 @@
     --gris-texto: #444;
 }
 
-/* =========================================
-   1. BODY Y FONDO
-   ========================================= */
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-
-    /* Fondo cremita */
     background-color: var(--crema);
-
     color: var(--gris-texto);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* =========================================
-   2. NAVBAR
-   ========================================= */
-
 .navbar {
-    background: var(--blanco);
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 2rem; background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); height: 60px; box-sizing: border-box;
+    }
+    .logo {
+      display: flex; align-items: center; font-weight: bold; font-size: 1.5rem;
+      font-family: 'Playfair Display', serif; color: #8C5E2A;
+    }
+    .logo img { height: 50px; margin-right: 15px; }
+    .links a { text-decoration: none; color: #333; font-weight: 500; margin-left: 20px; font-size: 0.95rem; transition: color 0.3s; }
+    .links a:hover { color: #8C5E2A; }
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-}
-
-/* Letras café en Flora y Fauna */
-.logo span {
-    color: var(--cafe);
-}
-
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.links a {
-    text-decoration: none;
-    color: #555;
-    margin-left: 25px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.links a:hover {
-    color: var(--cafe);
-}
-
-/* =========================================
-   3. CONTENEDOR PRINCIPAL
-   ========================================= */
 
 .main-container {
     background: white;
@@ -92,9 +43,6 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* =========================================
-   4. TÍTULOS
-   ========================================= */
 
 .titulo-principal, 
 .titulo-seccion {
@@ -110,9 +58,6 @@ body {
     font-size: 1rem;
 }
 
-/* =========================================
-   5. GRID ESTADÍSTICAS
-   ========================================= */
 
 .grid-stats {
     display: grid;
@@ -153,9 +98,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* =========================================
-   6. GRID DE ZONAS
-   ========================================= */
 
 .grid-zonas {
     display: grid;
@@ -192,9 +134,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================================
-   7. BOTÓN PRINCIPAL
-   ========================================= */
 
 .boton-principal {
     background-color: var(--cafe);
@@ -214,10 +153,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* =========================================
-   8. SECCIÓN INFO
-   ========================================= */
-
 .info-box {
     background: #FAF7EB;
     padding: 40px;
@@ -226,9 +161,6 @@ body {
     text-align: center;
 }
 
-/* =========================================
-   9. FOOTER - CAFÉ ABAJO
-   ========================================= */
 
 .footer {
     background-color: var(--cafe-oscuro);
@@ -246,10 +178,18 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+.siguenos-redes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
 
-/* =========================================
-   10. RESPONSIVE
-   ========================================= */
+    .instagram-icon {
+      height: 30px;
+    }
+
 
 @media (max-width: 768px) {
 

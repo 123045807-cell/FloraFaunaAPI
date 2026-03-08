@@ -177,26 +177,13 @@
   </style>
 </head>
 <body>
-
-  <div id="flash-messages-container" style="display: none;">
-    {% with messages = get_flashed_messages(with_categories=True) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                {% if "Inicio de sesión exitoso" not in message %}
-                    <div data-category="{{ category }}" data-message="{{ message }}"></div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-  </div>
-
   <nav class="navbar">
     <div class="logo">
       <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logotipo">
       <span>Fauna y Flora Local Qro</span>
     </div>
     <div class="links">
-        <a href="/mapa-usuario">Mapa</a>
+        <a href="/mapa2">Mapa</a>
         <a href="/inicio_usuario">Volver</a>
     </div>
   </nav>
