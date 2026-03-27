@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, Date, Time, ForeignKey
 from sqlalchemy.orm import relationship
-from app.data.db import Base
+from app.data.conexion import Base
 
 
 class Consejo(Base):
